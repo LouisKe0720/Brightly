@@ -2,6 +2,8 @@ import React from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import './Navbar.css';
 import BrightlyLogo from '../assets/Brightly.png';
+import StreakLogo from '../assets/Streak.png';
+import ProgressLogo from '../assets/ProgressIcon.png';
 
 function Navbar() {
     // Used to determine the current active route
@@ -29,24 +31,38 @@ function Navbar() {
                 </div>
                 <ul>
                     <li>
-                        {/* Home link with active class based on current route */}
+                        {/* Learn link - main lessons like Duolingo */}
                         <Link 
-                            to="/" 
-                            className={location.pathname === '/' ? 'active' : ''}
+                            to="/learn" 
+                            className={location.pathname === '/learn' ? 'active' : ''}
                         >
-                            Home
+                            Learn
                         </Link>
                     </li>
                     <li>
-                        {/* Dashboard link with active class based on current route */}
+                        {/* Progress Chart */}
                         <Link 
-                            to="/dashboard" 
-                            className={location.pathname === '/dashboard' ? 'active' : ''}
+                            to="/progress" 
+                            className={location.pathname === '/progress' ? 'active' : ''}
                         >
-                            Dashboard
+                            <img 
+                                src={ProgressLogo} 
+                                alt="Progress Logo"
+                                className="nav-icon"
+                            />
+                            Progress
                         </Link>
                     </li>
                 </ul>
+
+                {/* Streak counter - separate from navigation */}
+                <div className="streak-icon">
+                    <img 
+                        src={StreakLogo} 
+                        alt="Streak Logo"
+                    />
+                    <span className="streak-count">0</span>
+                </div>
             </div>
         </nav>
     );

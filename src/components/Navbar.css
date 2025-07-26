@@ -61,6 +61,42 @@ nav {
     filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.15));
 }
 
+/* Streak Container */
+.streak-icon {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255, 255, 255, 0.15);
+    padding: 8px 10px;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+}
+
+.streak-icon img {
+    height: 24px;
+    width: 24px;
+    object-fit: contain;
+    filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.1));
+}
+
+.streak-count {
+    color: #2c5f7c;
+    font-weight: 600;
+    font-size: 14px;
+    font-family: 'Inter', sans-serif;
+    min-width: 20px;
+    text-align: center;
+}
+
+/* Streak Container Hover Effect */
+.streak-icon:hover {
+    transform: translateY(-2px);
+    background: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 6px 15px rgba(42, 77, 105, 0.1);
+}
+
 /* Navigation Links Style*/
 nav ul {
     list-style: none;
@@ -72,7 +108,7 @@ nav ul {
 
 /* Navigation Links */
 nav li {
-    margin-left: 8px;
+    margin-left: 30px;
 }
 
 /* Responsive design */
@@ -93,7 +129,7 @@ nav li {
     }
     
     nav li {
-        margin: 4px;
+        margin: 5px;
     }
     
     nav a {
@@ -123,6 +159,7 @@ nav a {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     display: inline-flex;
     align-items: center;
+    gap: 8px;
     background: rgba(255, 255, 255, 0.15);
     backdrop-filter: blur(15px);
     border: 1px solid rgba(255, 255, 255, 0.25);
@@ -130,6 +167,14 @@ nav a {
     text-transform: none;
     position: relative;
     overflow: hidden;
+}
+
+/* Navigation Link Icons */
+.nav-icon {
+    height: 18px;
+    width: 18px;
+    object-fit: contain;
+    filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.1));
 }
 
 /* Add hover effect */
