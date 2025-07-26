@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+/* Navbar Styles */
+
+/* General Navbar Styles */
+nav {
+    background: linear-gradient(135deg, #c1dee1 0%, #b8d4d8 100%);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    padding: 15px 30px;
+    border-radius: 16px;
+    margin: 15px;
+    font-family: 'Poppins', sans-serif;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    animation: slideDown 0.5s ease-out;
+}
+
+/* Navbar entrance animation */
+@keyframes slideDown {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Navbar Container */
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Logo Container */
+.logo {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+/* Logo Image */
+.logo img {
+    height: 50px;
+    margin-right: 15px;
+    vertical-align: middle;
+    object-fit: contain;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+    transition: transform 0.3s ease;
+}
+
+/* Logo Hover Effect */
+.logo img:hover {
+    transform: scale(1.05);
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.15));
+}
+
+/* Navigation Links Style*/
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+}
+
+/* Navigation Links */
+nav li {
+    margin-left: 8px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    nav {
+        margin: 10px;
+        padding: 12px 20px;
+    }
+    
+    .navbar-container {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    nav li {
+        margin: 4px;
+    }
+    
+    nav a {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+    
+    .logo img {
+        height: 40px;
+        margin-right: 10px;
+    }
+}
+
+/* Navigation Links */
+nav a {
+    color: #2a4d69;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 16px;
+    padding: 12px 20px;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    font-family: 'Poppins', 'Segoe UI Emoji', 'Apple Color Emoji', 'Noto Color Emoji', sans-serif;
+    vertical-align: middle;
+    display: inline-flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Add hover effect */
+nav a:hover {
+    background: rgba(255, 255, 255, 0.25);
+    color: #1a3547;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(42, 77, 105, 0.15);
+}
+
+/* Active state for current page */
+nav a.active {
+    background: rgba(42, 77, 105, 0.15);
+    color: #1a3547;
+    font-weight: 700;
+    box-shadow: 0 2px 8px rgba(42, 77, 105, 0.2);
+}
+
+/* Smooth focus states for accessibility */
+nav a:focus {
+    outline: 2px solid #2a4d69;
+    outline-offset: 2px;
+}
